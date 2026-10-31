@@ -28,7 +28,7 @@ func start
 func azure functionapp publish <your-function-app-name>
 ```
 
-When the host starts, open `http://localhost:7071/api/`—not `http://localhost:7071/api/%7B*route%7D`. The Function serves the dashboard from the `web/` folder.
+When the host starts, open `http://localhost:7071/`. The Function serves the dashboard from the `web/` folder. The HTTP route prefix is intentionally empty so local and Azure URLs are identical.
 
 ### Local fallback when Core Tools cannot start
 
@@ -45,9 +45,7 @@ For local development, start Azurite before `func start`, or replace the two con
 
 ## 3. Deploy and configure the UI
 
-1. In `web/app.js`, replace `REPLACE_WITH_FUNCTION_API_BASE` with `https://<your-function-app-name>.azurewebsites.net/api`.
-2. In the same file, replace `REPLACE_WITH_FUNCTION_KEY` with the Function host key. This is adequate for an internal POC; use Microsoft Entra ID authentication and a backend-for-frontend for production.
-3. Upload the contents of `web/` to the special `$web` container in Storage Explorer or Azure Portal. Open the static website endpoint.
+The dashboard is deployed with the Function App and automatically uses same-origin API requests. Open the Function App's default hostname directly. For production, add Microsoft Entra ID authentication and a backend-for-frontend before exposing uploads publicly.
 
 ## Demo script
 
