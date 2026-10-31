@@ -1,0 +1,11 @@
+.git/
+.gitignore
+.venv/
+.venv314/
+.pip-cache/
+.npm-cache/
+.python_packages/
+__pycache__/
+local.settings.json
+local.settings.example.json
+README.md

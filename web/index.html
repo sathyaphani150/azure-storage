@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>StockLens | Inventory document intelligence</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2335a8e0'/%3E%3Cpath d='M18 14h21l9 9v27H18z' fill='%23071426'/%3E%3Cpath d='M39 14v10h9M25 33h16M25 41h16' stroke='white' stroke-width='4' fill='none'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="hero"><span>AZURE STORAGE POC</span><h1>StockLens</h1><p>Turn supplier PDFs and Word documents into searchable inventory evidence—automatically.</p></section>
+    <section class="card"><h2>Upload a supplier document</h2><p>PDF or DOCX · max 10 MB · Event Grid will start processing after upload.</p><form id="upload-form"><input id="file" name="file" type="file" accept="application/pdf,.pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.docx" required><button>Upload and process</button></form><output id="notice"></output></section>
+    <section class="results"><div class="results-heading"><div><h2>Document activity</h2><p>Live processing state from Azure Table Storage.</p></div><button class="secondary" id="refresh">Refresh</button></div><div id="documents" class="documents"></div></section>
+  </main>
+  <script src="app.js?v=20261031-2"></script>
+</body>
+</html>

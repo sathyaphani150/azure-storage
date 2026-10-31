@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+.venv314/
+.pip-cache/
+.npm-cache/
+.python_packages/
+local.settings.json
+.env
