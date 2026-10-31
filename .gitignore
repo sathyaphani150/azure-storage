@@ -4,5 +4,6 @@ __pycache__/
 .pip-cache/
 .npm-cache/
 .python_packages/
+azure-function-logs*
 local.settings.json
 .env
